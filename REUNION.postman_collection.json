@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "1f3b529a-0d80-4808-8f1d-928030c53466",
+		"name": "REUNION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25387018"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "/authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sonu@reunion.com\",\n    \"password\": \"reunion@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/authenticate/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Sonu Kumar\",\n    \"email\": \"sonu1@reunion.com\",\n    \"password\": \"reunion@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/authenticate/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"authenticate",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "/follow/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@reunion.com\",\n    \"password\": \"reunion@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/follow/63c73ae9e13f95272f0b26ec1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"follow",
+								"63c73ae9e13f95272f0b26ec1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/unfollow/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@reunion.com\",\n    \"password\": \"reunion@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/unfollow/63c73ae9e13f95272f0b26ec1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"unfollow",
+								"63c73ae9e13f95272f0b26ec1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@reunion.com\",\n    \"password\": \"reunion@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzczYjE4ZTEzZjk1MjcyZjBiMjZlZiIsImVtYWlsIjoic29udUByZXVuaW9uLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJG5JZm5TN3dmc3BwNC5xbE13WjMucnVsdlNZODZZMkZ6ZHIzLnhyQ2w1TkxncjhKZnpRRGRpIiwiaWF0IjoxNjc4ODkzMzE0LCJleHAiOjE2Nzk3NTczMTR9.bu1mhxj4ufbOeTKkuKNzGJIEZS0po4W4kHwIhtm7Rks",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "/posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Post About GGV\",\n    \"description\": \"Gate topper from GGV IT B.Tech 2019 - 2023 Batch.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/posts/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/posts/63c83c6eda5ca34d435388e8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"posts",
+								"63c83c6eda5ca34d435388e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/like/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/like/63c7d2d27c32c3cabedf546a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"like",
+								"63c7d2d27c32c3cabedf546a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/unlike/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/unlike/63c7d2d27c32c3cabedf546a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"unlike",
+								"63c7d2d27c32c3cabedf546a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/comment/:id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\": \"Yes, GDP of india is growing rapidly. Soon india will be developed country.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/comment/63c7d2d27c32c3cabedf546a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"comment",
+								"63c7d2d27c32c3cabedf546a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/posts/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/posts/63c7d2d27c32c3cabedf546a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"posts",
+								"63c7d2d27c32c3cabedf546a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/all_posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/all_posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"all_posts"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzczYjE4ZTEzZjk1MjcyZjBiMjZlZiIsImVtYWlsIjoic29udUByZXVuaW9uLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJG5JZm5TN3dmc3BwNC5xbE13WjMucnVsdlNZODZZMkZ6ZHIzLnhyQ2w1TkxncjhKZnpRRGRpIiwiaWF0IjoxNjc4ODkzMzE0LCJleHAiOjE2Nzk3NTczMTR9.bu1mhxj4ufbOeTKkuKNzGJIEZS0po4W4kHwIhtm7Rks",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
